@@ -6,7 +6,7 @@
 ```
 owner:
     hid: 215
-    name: Bharat Mallala
+    name: Mallala, Bharat
     url: https://github.com/bigdata-i523/hid215
 ```
 
@@ -15,7 +15,7 @@ owner:
 ```
 paper1:
    author: 
-   - Bharat Mallala
+   - Mallala, Bharat
    hid:
    - 215
    title: Big Data and Artificial Neural Networks
@@ -28,7 +28,7 @@ paper1:
 ```
 paper2:
    author: 
-   - Bharat Mallala
+   - Mallala, Bharat
    hid:
    - 215
    title: This is my paper about the other abc
