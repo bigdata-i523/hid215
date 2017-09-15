@@ -21,6 +21,7 @@ paper1:
    title: Big Data and Artificial Neural Networks
    abstract: This paper showcases tis and that and the other
    url: https://github.com/bigdata-i523/hid215/paper1/paper1.pdf
+   Status: Preparation  
 ```
    
 # Paper 2
@@ -33,7 +34,8 @@ paper2:
    - 215
    title: This is my paper about the other abc
    abstract: This paper showcases tis and that and the other in regards to abc
-   url: https://github.com/bigdata-i523/hid215/paper2/paper2.pdf   
+   url: https://github.com/bigdata-i523/hid215/paper2/paper2.pdf  
+   Status: yet to start
 ```
 
 # Project 
@@ -52,5 +54,6 @@ paper2:
    title: Benchmarking a BigData Docker deployment
    abstract: This paper showcases tis and that and the other 
    url: https://github.com/bigdata-i523/hid215/project/report.pdf
+   status: yet to start
 ```
    
