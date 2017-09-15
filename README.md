@@ -1,16 +1,13 @@
 # hid215
-# Comments
 
-* Mind the ```quotes and do not forget them```
-* Remove all sections that you have not yet created a directory in github with so our automated scripts do not fail. Only add them if the 
 
 # Owner
 
 ```
 owner:
-    hid: 000
-    name: Gregor von Laszewski
-    url: https://github.com/bigdata-i523/sample-hid000
+    hid: 215
+    name: Bharat Mallala
+    url: https://github.com/bigdata-i523/hid215
 ```
 
 # Paper 1
@@ -18,12 +15,10 @@ owner:
 ```
 paper1:
    author: 
-   - Gregor von Laszewski
-   - Fugang Wang
+   - Bharat Mallala
    hid:
-   - 000
-   - 001
-   title: This is my paper about xyz
+   - 215
+   title: Big Data and Artificial Neural Networks
    abstract: This paper showcases tis and that and the other
    url: https://github.com/bigdata-i523/sample-hid000/paper1/paper1.pdf
 ```
@@ -33,9 +28,9 @@ paper1:
 ```
 paper2:
    author: 
-   - Gregor von Laszewski
+   - Bharat Mallala
    hid:
-   - 000
+   - 215
    title: This is my paper about the other abc
    abstract: This paper showcases tis and that and the other in regards to abc
    url: https://github.com/bigdata-i523/sample-hid000/paper2/paper2.pdf   
