@@ -32,7 +32,7 @@ paper2:
    - Mallala, Bharat
    hid:
    - 215
-   title: This is my paper about the other abc
+   title: To be decided
    abstract: This paper showcases tis and that and the other in regards to abc
    url: https://github.com/bigdata-i523/hid215/paper2/paper2.pdf  
    Status: yet to start
@@ -51,7 +51,7 @@ paper2:
    - Mallala, Bharat
    hid:
    - 215
-   title: Benchmarking a BigData Docker deployment
+   title: to be decided
    abstract: This paper showcases tis and that and the other 
    url: https://github.com/bigdata-i523/hid215/project/report.pdf
    status: yet to start
