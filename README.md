@@ -19,9 +19,9 @@ paper1:
    hid:
    - 215
    title: Big Data and Artificial Neural Networks
-   abstract: This paper addresses how Big data and its applications can be used to addresses various issues that arise with Artificial Neural Networks(ANN). 
+   abstract: Big data is often referred as a problem of dealing with large data sets. With the advancements in computational science and the recent evolution of Artificial Intelligence(AI) and Machine Learning, huge volumes of data are being generated every day. Simultaneously the computational resources needed to process and analyze this data is trying to catch up with the rapidly growing data and for the most part have succeeded. In today's world, there is a large dependency on Neural networks for dealing with problems in AI and Data analysis. Big data and its applications can be used to address various issues that arise with Artificial Neural Networks(ANN) 
    url: https://github.com/bigdata-i523/hid215/paper1/paper1.pdf
-   status: Preparation
+   status: 99%
    chapter: Machine Learning
 ```
    
