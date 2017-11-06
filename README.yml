@@ -24,12 +24,12 @@ paper1:
     url: https://github.com/bigdata-i523/hid215/paper1/paper1.pdf
 paper2:
     review: Nov 6 2017
-    abstract: This paper showcases tis and that and the other
+    abstract: Big data refers to a problem of dealing with huge volumes of data. With the increase in the amount of data generated every day from various fields, it is becoming extremely hard to store and process this data efficiently. Artificial Intelligence is a research field aiming at replicating human work through machines. Computer vision refers to a research area within AI dealing with training computers to recognize certain subjects of interest. With the exponential growth of AI and computer vision in the recent years, there is need to address the big data problem associated with it.
     author:
         - Mallala, Bharat
     hid:
         - 215
-    status: yet to start
-    title: to be decided
+    status: Nov 6 17 100%
+    title: Big Data and Artificial Intelligence with Computer Vision
     type: report
-    url: https://github.com/bigdata-i523/hid215/project/report.pdf
+    url: https://github.com/bigdata-i523/hid215/paper2/report.pdf
