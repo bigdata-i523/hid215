@@ -1,0 +1,7 @@
+\begin{figure}[htp]
+    \includegraphics[width=1\textwidth]{image1.png}
+    \caption{Convolutional Network Architecture \cite{google}}
+    \label{fig:figure1}
+\end{figure}
+\efloatseparator
+ 
