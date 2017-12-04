@@ -5,15 +5,18 @@ owner:
     url: https://github.com/bigdata-i523/hid215
 paper1:
     abstract: >
-        Big data is often referred as a problem of dealing with large data sets.
-        With the advancements in computational science and the recent evolution of
-        Artificial Intelligence(AI) and Machine Learning, huge volumes of data are
-        being generated every day. Simultaneously the computational resources needed
-        to process and analyze this data is trying to catch up with the rapidly growing
-        data and for the most part have succeeded. In today's world, there is a large
-        dependency on Neural networks for dealing with problems in AI and Data analysis.
-        Big data and its applications can be used to address various issues that arise
-        with Artificial Neural Networks(ANN)
+        Big data is often referred as a problem of dealing with large
+        data sets.  With the advancements in computational science and
+        the recent evolution of Artificial Intelligence(AI) and
+        Machine Learning, huge volumes of data are being generated
+        every day. Simultaneously the computational resources needed
+        to process and analyze this data is trying to catch up with
+        the rapidly growing data and for the most part have
+        succeeded. In today's world, there is a large dependency on
+        Neural networks for dealing with problems in AI and Data
+        analysis.  Big data and its applications can be used to
+        address various issues that arise with Artificial Neural
+        Networks(ANN)
     author:
         - Mallala, Bharat
     chapter: Machine Learning
@@ -24,7 +27,17 @@ paper1:
     url: https://github.com/bigdata-i523/hid215/paper1/paper1.pdf
 paper2:
     review: Nov 6 2017
-    abstract: Big data refers to a problem of dealing with huge volumes of data. With the increase in the amount of data generated every day from various fields, it is becoming extremely hard to store and process this data efficiently. Artificial Intelligence is a research field aiming at replicating human work through machines. Computer vision refers to a research area within AI dealing with training computers to recognize certain subjects of interest. With the exponential growth of AI and computer vision in the recent years, there is need to address the big data problem associated with it.
+    abstract: >
+        Big data refers to a problem of dealing with huge volumes of
+        data. With the increase in the amount of data generated every
+        day from various fields, it is becoming extremely hard to
+        store and process this data efficiently. Artificial
+        Intelligence is a research field aiming at replicating human
+        work through machines. Computer vision refers to a research
+        area within AI dealing with training computers to recognize
+        certain subjects of interest. With the exponential growth of
+        AI and computer vision in the recent years, there is need to
+        address the big data problem associated with it.
     author:
         - Mallala, Bharat
     chapter: Technology
@@ -42,9 +55,18 @@ project:
         - 215
     title: Big Data Analytics on Influencers in Social Networks
     abstract: >
-       Social Networking has become a part of people's lives with millions
-of posts made every day. This huge volume of data paves the way to find interesting insights from data. Applying Big Data analytic methods on Twitter data helps in identifying the most influenced users.The Twitter data used for analysis is taken from Kaggle website. Performing feature selection tasks on this data has helped in identifying the important features that differentiate a user's influence over the other. By applying various Machine learning classification algorithms iteratively on these features obtained can be used to classify a user as more influential over the other. 
+       Social Networking has become a part of people's lives with
+       millions of posts made every day. This huge volume of data
+       paves the way to find interesting insights from data. Applying
+       Big Data analytic methods on Twitter data helps in identifying
+       the most influenced users.The Twitter data used for analysis is
+       taken from Kaggle website. Performing feature selection tasks
+       on this data has helped in identifying the important features
+       that differentiate a user's influence over the other. By
+       applying various Machine learning classification algorithms
+       iteratively on these features obtained can be used to classify
+       a user as more influential over the other.
     url: https://github.com/bigdata-i523/hid215/tree/master/project
     type: project
     status: Dec 04 17 90%
-chapter: Big Data with Social Media.
+    chapter: Big Data with Social Media.
