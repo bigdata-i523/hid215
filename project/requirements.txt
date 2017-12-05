@@ -1,6 +1,0 @@
-pandas
-numpy
-copy
-sklearn
-matplotlib
-seaborn
