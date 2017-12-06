@@ -20,7 +20,7 @@
 
 
 \begin{abstract}
-\TODO{Paper returned without review: First Figure is unreadable, figure labels and refs ar not used, uses {\bf bellow} which we explicitly said is not allowed.}
+% \TODO{Paper returned without review: First Figure is unreadable, figure labels and refs ar not used, uses {\bf bellow} which we explicitly said is not allowed.}
 
 Big data is often referred as a problem of dealing with large data sets. With the advancements in computational science and the recent evolution of Artificial Intelligence(AI) and Machine Learning, huge volumes of data are being generated every day. Simultaneously the computational resources needed to process and analyze this data is trying to catch up with the rapidly growing data and for the most part have succeeded. In today's world, there is a large dependency on Neural networks for dealing with problems in AI and Data analysis. Big data and its applications can be used to address various issues that arise with Artificial Neural Networks(ANN). 
 \end{abstract}
@@ -38,6 +38,29 @@ Certainly, with these advancements comes huge volumes of data which needs to be 
 
 Artificial Neural Networks usually consists of three primary layers, an input layer, output layer, hidden layer. There may be multiple layers of perceptrons within the hidden layer. From the figure 1 we can see the three layers of the ANN. The input layer takes in the input as a set of features and its corresponding weights and the output layer returns a predicted value. All the calculations are done in the hidden layer. The ANN's typically use the feedforward algorithm combined with back propagation for its calculation. The figure below shows the structure of ANN with the three layers. The network initially feeds forward to the very end and generates an output from the initial set of features and weights. It then back propagates using Gradient descent and recalculates the wights for each iteration. The algorithm finally stops of the difference in weights from one iteration to the other is not greater than a predefined threshold. We then test this on the training set and evaluate the performance of the network.
 
+\begin{figure}[htp]
+    \includegraphics[width=1.0\columnwidth]{images/images.jpg}
+    \caption{Neural Network Architecture \cite{google}}
+    \label{fig:figure1}
+\end{figure}
+
+\begin{figure}[htp]
+    \includegraphics[width=1.0\columnwidth]{images/images1.jpg}
+    \caption{Stages of big data}
+    \label{fig:figure2}
+\end{figure}
+
+\begin{figure}[htp]
+    \includegraphics[width=1.0\columnwidth]{images/images2.jpg}
+    \caption{Architecture of DRNN}
+    \label{fig:figure3}
+\end{figure}
+
+\begin{figure}[htp]
+    \includegraphics[width=1.0\columnwidth]{images/images3.jpg}
+    \caption{Big data Architecture and Components \cite{www-google}}
+    \label{fig:figure4}
+\end{figure}
 
 \section{ANN's with Big data in Pharmacology}
 
@@ -98,28 +121,5 @@ I would like to thank Dr. Gregor von Laszewski and the AI's for all the help the
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
 
-\begin{figure}[htp]
-    \includegraphics[width=1.0\columnwidth]{images/images.jpg}
-    \caption{Neural Network Architecture \cite{google}}
-    \label{fig:figure1}
-\end{figure}
-
-\begin{figure}[htp]
-    \includegraphics[width=1.0\columnwidth]{images/images1.jpg}
-    \caption{Stages of big data}
-    \label{fig:figure2}
-\end{figure}
-
-\begin{figure}[htp]
-    \includegraphics[width=1.0\columnwidth]{images/images2.jpg}
-    \caption{Architecture of DRNN}
-    \label{fig:figure3}
-\end{figure}
-
-\begin{figure}[htp]
-    \includegraphics[width=1.0\columnwidth]{images/images3.jpg}
-    \caption{Big data Architecture and Components \cite{www-google}}
-    \label{fig:figure4}
-\end{figure}
 
 \end{document}
