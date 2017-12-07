@@ -86,7 +86,13 @@ The following are the 11 attributes of each user:\\
 Due to the existence of a large number of features available in the data set, this feature should be reduced and only the most important features that help to model the data needs to be selected. If all the features are used to model the data the model performs exceptionally well on the training data set but fails to perform well on the testing data set. This is called 'Over-fitting'. This a general phenomenon that occurs across most Machine learning algorithms when using a large set of feature for classification because the model learns to memorize these features resulting in a good accuracy score for train data set, but when we encounter a new set of values for these features in the testing data the models fail to classify them correctly resulting in a poor accuracy score.\\
 There are many approaches to feature selection. One approach is to have domain knowledge on the data i.e. having prior knowledge on the data set and by intuition selecting features from the data. For example, if we are predicting sales prices of a house based on the features of the house, having an in-depth knowledge on what feature make the house price go up or down can help is selecting the features of interest. This often requires a professional who experts in that domain to make the decision. But this approach often fails for two reasons, firstly it hard to find an expert opinion on every data set and secondly the intuition of the expert can be trusted as human are prone to make mistakes in estimation.\\
 The ideal approach would be to use some algorithm that can predict the features of interest by iterating over the model multiple times. Random forest for feature selection is one such algorithm. As the word random suggests, the algorithm builds small decision trees using a different subset of features in each iteration and then combines the insights from all of these decision trees and ranks the features in the dataset based on their importance. Since the algorithm builds thousands of trees based on the random selection of features, the feature ranking, for the most part, is accurate. One the features with its ranking are obtained, one has to select a subset of these features and use them for model classification. Since the ideal number of features that best suits the model is still unknown, the approach is to iterate over the important feature and select the best possible subset. For the Twitter dataset, the random forest ranked the feature according to their importance and selecting 8 of the top most important feature given the best possible results.\\
-The features are follower count, listed count, re-tweets received and Network features 1 for both A and B users. The figure 7 shows the features ranked according to their importance.
+The features are follower count, listed count, re-tweets received and Network features 1 for both A and B users. Figure \ref{fig:Fig1} shows the features ranked according to their importance. \\
+
+\begin{figure}
+\includegraphics[width=1.0\columnwidth]{images/fig1.png}
+\caption{Variable importance }
+\label{fig:Fig1}
+\end{figure}
 
 
 \section{Classification methods}
@@ -208,8 +214,14 @@ Here there are lot of design choice to made\\
 1.Initializing weights - weights are usually initialized random normal manner. \\
 2.Choosing the number of hidden layers- This parameter cannot be determined in advance. One has to iterate through multiple values of the hidden layer unless the best accuracy is obtained.\\
 3.Update method- The weights can be updated typically using the batch update on the online update. In most application typically the online method is used as it is much more efficient.\\
-4.Choosing the Activation function- This is a difficult task, most commonly non-linear activation functions are used. Example Re-Lu activation function.\\
-The figure \cite{Williamson1} shows the typical architecture of a Multi-layer Neural network. \\
+4.Choosing the Activation function- This is a difficult task, most commonly non-linear activation functions are used. Example Re-Lu activation function. Figure \ref{fig:Fig2} shows the architecture of a Multi-layer Neural network \\
+
+\begin{figure}
+\includegraphics[width=1.0\columnwidth]{images/fig2.jpg}
+\caption{Architecture of a Multi-layer Neural network \cite{Williamson1}}
+\label{fig:Fig2}
+\end{figure}
+
 \subsection{K Nearest Neighbours}
 K Nearest Neighbours is one of the simplest machine learning models that can be easily implemented and it surprisingly works well for most classification problems. K Nearest Neighbours can be used for both classification and regression problems giving it the flexibility to solve most problems.\\
 The algorithm assumes all the data points are scattered on a 2-dimensional plane and it tries to find clusters of these data points. The algorithm mainly has two phases, the training phase, and the classification phase. The training phase of KNN is fairly simple as it just stores the values of each of the variables and also the class label. The classification phase is the most important one as all the calculation are made in this phase. Since cross-validation is being used to split the data set into train and test, in the training phase the algorithm stores the values of each of the 8 attributes used for model fitting and also the values of the class label for each fold of the cross-validation.\\
@@ -283,11 +295,26 @@ In the testing or prediction phase, when a test sample is to be classified into 
 Since the data is sparse, null values can exist in the data. These null values if not treated can be catastrophic to the model accuracy. The null or missing values can be treated either by removing the rows which have these values or replacing them with apt data. For example, if a data frame has 10 null values in a column, the approach would be to replace the values with either the mean, median or mode of that column.  The data here does not consist of any null or missing values in any of the rows.
 \subsection{Outliers}
 If a data point diverges very much from the rest of the data points it is called an outlier. These outliers if not addressed will eventually lead to overfitting of the model i.e. the model fits each and every point in the train data and gets a good accuracy, but when tested on unseen data it will result in a poor accuracy score. To overcome overfitting the outliers need to be addressed. The outliers in the data can be identified by either plotting a box plot or scatter plot of each of the variables in the train data and check for the distribution of data points.\\
-Just like missing values the outlier can either be deleted from the data or can be modified to better suit the model. The ideal approach would be to use binning of the columns which have outliers. In binning data, we bin the data into small categories based on a range. The Twitter data here consists of a few outliers in almost all the attributes. Binning the data improved the accuracy score of all the models. The figure 6 shows the scatter plot of A follower count variable with outliers. From the scatter plot it is evident that for all the attributes the data point is concentrated in the lower range. Hence after binning each attribute into two the first two lower categories, null values are generated in the higher categories. Hence the rows with Null values have been dropped thereby removing the outliers. The data is reduced to 5209 rows after the removal of outliers. 
+Just like missing values the outlier can either be deleted from the data or can be modified to better suit the model. The ideal approach would be to use binning of the columns which have outliers. In binning data, we bin the data into small categories based on a range. The Twitter data here consists of a few outliers in almost all the attributes. Binning the data improved the accuracy score of all the models. Figure \ref{fig:Fig3} shows the scatter plot of A follower count variable with outliers. \\
+
+\begin{figure}
+\includegraphics[width=1.0\columnwidth]{images/fig3.png}
+\caption{Scatter Plot}
+\label{fig:Fig3}
+\end{figure}
+
+From the scatter plot it is evident that for all the attributes the data point is concentrated in the lower range. Hence after binning each attribute into two the first two lower categories, null values are generated in the higher categories. Hence the rows with Null values have been dropped thereby removing the outliers. The data is reduced to 5209 rows after the removal of outliers. 
 \subsection{Correlation among attributes}
 
-Since the data consists of 22 columns apart from the class label, correlations among these attributes might be. Correlation is the measure of association between two attributes. It indicates how closely two attributes are related to each other. The range of correlation is between -1 and 1. A positive correlation indicates the two variables are directly proportional and a negative correlation indicated that they are indirectly proportional. If the value is zero then there is no association between the attributes.\\
-The figure shows a heat map displaying the correlation among the variables. The color of the heat map indicates the level of correlation among attributes. As the color tends to get closer to yellow, it shows a positive correlation and shows a negative correlation if color tends to get bluer. For example, there is a strong correlation between network feature 1 and mentions received. This correlation also helps in feature selection as we can ignore one of the two features if they are closely related. The variables which are closely related to the class label are found to be follower count and listed count of both A and B. This is not very surprising as a person with high follower count or listed count on Twitter is expected to be more influential than others. These insights proved to be useful in the further analysis when performing feature reduction.
+Since the data consists of 22 columns apart from the class label, correlations among these attributes might be. Correlation is the measure of association between two attributes. It indicates how closely two attributes are related to each other. The range of correlation is between -1 and 1. A positive correlation indicates the two variables are directly proportional and a negative correlation indicated that they are indirectly proportional. If the value is zero then there is no association between the attributes. Figure \ref{fig:Fig4} shows a heat map displaying the correlation among the variables. \\
+
+\begin{figure}
+\includegraphics[width=1.0\columnwidth]{images/fig4.png}
+\caption{Correlation Plot}
+\label{fig:Fig4}
+\end{figure}
+
+The color of the heat map indicates the level of correlation among attributes. As the color tends to get closer to yellow, it shows a positive correlation and shows a negative correlation if color tends to get bluer. For example, there is a strong correlation between network feature 1 and mentions received. This correlation also helps in feature selection as we can ignore one of the two features if they are closely related. The variables which are closely related to the class label are found to be follower count and listed count of both A and B. This is not very surprising as a person with high follower count or listed count on Twitter is expected to be more influential than others. These insights proved to be useful in the further analysis when performing feature reduction.
 \section{Experiment and Results}
 To avoid overfitting, the training data has been further split into train and test using cross-validation. 80 percent of the data has been used for training the classifier and the remaining 20 percent is used to evaluate the performance of the classifier. \\
 Feature selection has been performed on the train data using Random Forest Classifier to obtain the most important attributes. A bar plot has been plotted to know the top most important variables which are shown in the figure. The top four important attributes are identified to be follower-count, listed-count, mentions-received and network feature-1 of both A and B. Further analysis or classification has been performed on these eight attributes.
@@ -299,7 +326,14 @@ One the model is fitted, there is a need to evaluate the performance of the mode
 \textbf{4. Recall score:} Ratio of True positives to sum of True positives ,False negatives for each class\\
 \textbf{5. Confusion matrix:} To know how well the classifier performs in each class in the data. It gives the number of True positive, False positives, True negatives, and False negatives. The rows in the matrix correspond to actual class label and the columns to the predicted class label.\\\\
 If a classifier has very high precision then it may miss many true instances of a label, similarly, if it has very high recall score it is prone to misclassify many data points. Hence a good classifier should have a trade-off between precision score and recall score.\\
-For the Influence analysis, the Ada boost Classifier has the best performance with an accuracy score of 0.78 and an F1 score of 0.78. The MLP classifier performed the worst with an accuracy score of 0.68 and an F1 score of 0.67. This is because the classifier performed extremely well in one class and very poorly in the other class. This is evident from a high precision score in class 1 and a low recall score, and vice-versa for class 0. Whereas for the AdaBoost classifier both class 1 and 0 have decent precision and recall scores, hence finding a good trade-off between them. The figure 5 shows the evaluation performance of each classifier with all the evaluation metrics.  
+For the Influence analysis, the Ada boost Classifier has the best performance with an accuracy score of 0.78 and an F1 score of 0.78. The MLP classifier performed the worst with an accuracy score of 0.68 and an F1 score of 0.67. This is because the classifier performed extremely well in one class and very poorly in the other class. This is evident from a high precision score in class 1 and a low recall score, and vice-versa for class 0. Whereas for the AdaBoost classifier both class 1 and 0 have decent precision and recall scores, hence finding a good trade-off between them. Figure \ref{fig:Fig5} shows the evaluation performance of each classifier with all the evaluation metrics\\
+
+\begin{figure}
+\includegraphics[width=1.0\columnwidth]{images/fig5.jpeg}
+\caption{Evaluation Metrics}
+\label{fig:Fig5}
+\end{figure}
+
 \section{Future work}
 Predicting the Influence of users based on various attributes paves the way for much more research in the area. Instead just classifying two users based on their influence it can be extended to a larger audience, which can be quite interesting. But it becomes a regression problem rather than a classification problem. This analysis can also be extended to address how an individual is influential i.e. in a good or a bad way. This can be achieved with the help of sentiment analysis performed on the users. But this would require the actual tweets that the users make.
 \section{Conclusion}
@@ -307,46 +341,22 @@ Twitter being one of the most popular social media platforms, serves as a source
 
 
 \begin{acks}
-We would like to thank Dr. Gregor von Laszewski and the AI's for all the help they have provided for this project..
+We would like to thank Dr. Gregor von Laszewski and the AIs for all the help they have provided for this project.
 \end{acks}
 
-newpage
+\newpage
 \appendix 
 \section{Work Breakdown} 
 \begin{description} 
-\item[Dataset identification:]Bharat Mallala
+\item[Dataset identification:] Bharat Mallala
 \item[Exploratory data analysis:] Bharat Mallala and Jyothi Pranavi Devineni
 \item[Feature Selection:] Jyothi Pranavi Devineni
 \item[Random Forest, SVM, K nearest neighbours, MLP :] Bharat Mallala
 \item[Naive bayes, SGD, Logistic regression, Adaboost:] Jyothi Pranavi Devineni
 \item[Project Report:] Bharat Mallala and Jyothi Pranavi Devineni
 \end{description} 
+
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
-\clearpage
-\begin{figure}[htp]
-    \includegraphics[width=0.8\textwidth]{Variable.PNG}
-    \caption{Variable importance plot}
-    \label{fig:figure1}
-\end{figure}
-\begin{figure}[htp]
-    \includegraphics[width=1\textwidth]{neuralnet.jpg}
-    \caption{Neural Network Architecture \cite{google1}}
-    \label{fig:figure2}
-\end{figure}
-\begin{figure}[htp]
-    \includegraphics[width=0.8\textwidth]{Scatterplot.png}
-    \caption{Scatter plot for follower count of A }
-    \label{fig:figure 3}
-\end{figure}
-\begin{figure}[htp]
-    \includegraphics[width=0.8\textwidth]{heatmap.PNG}
-    \caption{Heat Map showing correlation among variables}
-    \label{fig:figure4}
-\end{figure}
-\begin{figure}[htp]
-    \includegraphics[width=0.8\textwidth]{results.jpeg}
-    \caption{Model Performance}
-    \label{fig:figure 5}
-\end{figure}
+
 \end{document}
