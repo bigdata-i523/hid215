@@ -1,6 +1,6 @@
 \documentclass[sigconf]{acmart}
 
-\input{format/i523}
+\input{format/final}
 
 \begin{document}
 \title{Big Data and Artificial Intelligence with Computer Vision}
@@ -25,7 +25,7 @@
 Big data refers to a problem of dealing with huge volumes of data. With the increase in the amount of data generated every day from various fields, it is becoming extremely hard to store and process this data efficiently. Artificial Intelligence is a research field aiming at replicating human work through machines. Computer vision refers to a research area within AI dealing with training computers to recognize certain subjects of interest. With the exponential growth of AI and computer vision in the recent years, there is need to address the big data problem associated with it.
 \end{abstract}
 
-\keywords{Artificial Intelligence, Computer vision, Perceptron Deep Learning, Convolutional Neural Networks }
+\keywords{hid215, Artificial Intelligence, Computer vision, Perceptron Deep Learning, Convolutional Neural Networks }
 
 
 \maketitle
@@ -43,7 +43,13 @@ Hence we can map an AI problem as a search problem, but it usually requires sear
 
 \subsection{CNN's for Computer vision}
 
-Convolutional Neural Networks(CNN's) is the key to advancements in computer vision in the recent years with its low parameter count and computational efficacy. A CNN has multiple layers with perceptrons in them that help in the information flow from the input to output. A CNN typically has filters that are mapped across the original image to extract useful features from the image. During the training phase of the model, CNN learns the values of the filters. A CNN architecture has mainly two phases convolution phase and pooling phase. In the convolution phase features are extracted from the image using filters. In the pooling phase, the width of the feature map is reduced by applying various techniques. This is done to remove unnecessary data from the features. These stages are iterated till the desired features are obtained from the image.\cite{Williamson}   Figure 1 shows a typical CNN architecture.\cite{google}
+Convolutional Neural Networks(CNN's) is the key to advancements in computer vision in the recent years with its low parameter count and computational efficacy. A CNN has multiple layers with perceptrons in them that help in the information flow from the input to output. A CNN typically has filters that are mapped across the original image to extract useful features from the image. During the training phase of the model, CNN learns the values of the filters. A CNN architecture has mainly two phases convolution phase and pooling phase. In the convolution phase features are extracted from the image using filters. In the pooling phase, the width of the feature map is reduced by applying various techniques. This is done to remove unnecessary data from the features. These stages are iterated till the desired features are obtained from the image \cite{Williamson}.   Figure 1 shows a typical CNN architecture \cite{google}.
+
+\begin{figure*}[htp]
+    \includegraphics[width=1\textwidth]{images/image1.png}
+    \caption{Convolutional Network Architecture \cite{google}}
+    \label{fig:figure1}
+\end{figure*}
 
 \subsection{Design}
 A lot of design principles need to be followed when designing a CNN. With the numerous number of iterations required for the CNN phases, a good design decision can vastly improve the efficiency.Avoiding bottlenecks/cycles in the CNN helps in smooth flow of information which otherwise can drastically reduce the performance of the CNN. The CNN is usually trained locally within the network. Using a high dimensional representation of the feature space help to in training the network at a relatively faster rate. Pooling/Spacial aggregation of the CNN helps to reduce the dimensions of the feature space which also helps in faster training. This is most helpful when we are dealing with big data and we have a huge set of training images. When dealing with huge CNN with huge depth and width of the network, there is a need to strike a balance among width and depth of the image. The depth of CNN is determined by the size of the filter used at each iteration of the network. Optimality can be obtained when increasing each of them in parallel for every iteration.\cite{Christian}
@@ -83,9 +89,4 @@ I would like to thank Dr. Gregor von Laszewski and the AI's for all the help the
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
 
-\begin{figure}[htp]
-    \includegraphics[width=1\textwidth]{images/image1.png}
-    \caption{Convolutional Network Architecture \cite{google}}
-    \label{fig:figure1}
-\end{figure}
 \end{document}
