@@ -50,9 +50,11 @@ paper2:
 project:
     review: Dec 4 2017
     author:
-        - Mallala, Bharat and Jyothi Pranavi Devineni
+        - Mallala, Bharat
+        - Jyothi Pranavi Devineni
     hid:
         - 215
+        - 208
     title: Big Data Analytics on Influencers in Social Networks
     abstract: >
        Social Networking has become a part of people's lives with
